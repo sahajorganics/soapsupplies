@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#183c2b">
+    <meta name="description" content="Explore botanical powders, dried ingredients, and soap-making essentials from Sahaj Organics.">
+    <title>Sahaj Organics | Botanical ingredients, naturally</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">A little more nature in every creation <span aria-hidden="true">✳</span> Thoughtfully selected ingredients</div>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Sahaj Organics home">
+        <span class="brand-mark" aria-hidden="true">s</span>
+        <span class="brand-copy"><strong>Sahaj Organics</strong><small>by Kavitha</small></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link active" href="index.html">Home</a>
+        <details class="nav-dropdown">
+          <summary>Soapmaking supplies <span class="dropdown-caret" aria-hidden="true"></span></summary>
+          <div class="dropdown-menu">
+            <a href="#shop" data-category-link="all">All soapmaking supplies</a>
+            <a href="#shop" data-category-link="Botanical powders">Botanical powders</a>
+            <a href="#shop" data-category-link="Whole botanicals">Whole botanicals</a>
+            <a href="#shop" data-category-link="Soapmaking pantry powders">Soapmaking pantry powders</a>
+            <a href="#shop" data-category-link="Soap clays & exfoliants">Soap clays &amp; exfoliants</a>
+            <a href="#shop" data-category-link="Soapmaking butters & waxes">Soapmaking butters &amp; waxes</a>
+          </div>
+        </details>
+        <a class="nav-link" href="#our-story">Our story</a>
+        <a class="nav-link" href="#reviews">Reviews</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <a class="header-cta" href="https://wa.me/916305970687" target="_blank" rel="noreferrer">Let’s talk <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span aria-hidden="true">✳</span> GOOD THINGS, GROWN NATURALLY</span>
+          <h1>Nature’s little<br>ingredients for<br><em>beautiful making.</em></h1>
+          <p>Discover thoughtfully chosen botanicals and everyday essentials for your next soap, skincare, or DIY project.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#shop">Shop supplies <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="contact.html">Have a question? <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="hero-note"><span class="note-icon" aria-hidden="true">✿</span><span>Rooted in nature.<br><strong>Made for your creations.</strong></span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img src="images/Rates.jpeg" alt="Sahaj Organics raw materials and product rate card">
+          </div>
+          <div class="hero-stamp"><span>MADE WITH</span><strong>nature</strong><span>IN MIND</span></div>
+          <span class="hero-sparkle sparkle-one" aria-hidden="true">✳</span>
+          <span class="hero-sparkle sparkle-two" aria-hidden="true">✳</span>
+        </div>
+        <div class="hero-bottom-note">BOTANICALS <span>•</span> RAW MATERIALS <span>•</span> MADE WITH CARE</div>
+      </section>
+
+      <section class="benefits" aria-label="What we offer">
+        <div><span class="benefit-icon" aria-hidden="true">✿</span><span><strong>Botanical favourites</strong><small>Ingredients inspired by nature</small></span></div>
+        <div><span class="benefit-icon" aria-hidden="true">⌂</span><span><strong>For your creations</strong><small>Soapmaking, skincare &amp; DIY</small></span></div>
+        <div><span class="benefit-icon" aria-hidden="true">♡</span><span><strong>Here to help</strong><small>Ask us about an ingredient</small></span></div>
+      </section>
+
+      <section class="shop-section" id="shop">
+        <div class="section-heading">
+          <div><span class="eyebrow">A GARDEN OF GOOD THINGS</span><h2>Shop soapmaking supplies</h2></div>
+          <p>From familiar favourites to new things to try, find something lovely for your next batch.</p>
+        </div>
+        <div class="shop-controls">
+          <div class="category-filters" role="group" aria-label="Filter products by category" id="categoryFilters"></div>
+          <label class="search-box">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <span class="visually-hidden">Search products</span>
+            <input id="productSearch" type="search" placeholder="Search products…" autocomplete="off">
+          </label>
+        </div>
+        <p class="results-count" id="resultsCount" aria-live="polite"></p>
+        <div class="product-grid" id="productsGrid"></div>
+        <p class="price-note">Prices shown are from our supplied rate card and may change. For current pricing, sizes, or availability, please get in touch.</p>
+      </section>
+
+      <section class="reviews-section" id="reviews" aria-labelledby="reviewsHeading">
+        <div class="reviews-section-inner">
+          <div class="reviews-section-heading">
+            <span class="eyebrow">SHARED WITH CARE</span>
+            <h2 id="reviewsHeading">Customer reviews</h2>
+            <p>We’d love to hear about your experience with Sahaj Organics.</p>
+          </div>
+          <div class="approved-reviews" id="approvedReviews" aria-live="polite"></div>
+          <form class="review-form" id="reviewForm">
+            <h3>Share your experience</h3>
+            <div class="review-form-field">
+              <label for="reviewerName">Your name</label>
+              <input id="reviewerName" name="reviewerName" type="text" autocomplete="name" maxlength="60" required>
+            </div>
+            <fieldset class="review-rating">
+              <legend>Your rating</legend>
+              <div class="review-rating-options">
+                <label class="review-rating-option"><input type="radio" name="reviewRating" value="5" required><span aria-hidden="true">★</span><span class="visually-hidden">5 stars</span></label>
+                <label class="review-rating-option"><input type="radio" name="reviewRating" value="4"><span aria-hidden="true">★</span><span class="visually-hidden">4 stars</span></label>
+                <label class="review-rating-option"><input type="radio" name="reviewRating" value="3"><span aria-hidden="true">★</span><span class="visually-hidden">3 stars</span></label>
+                <label class="review-rating-option"><input type="radio" name="reviewRating" value="2"><span aria-hidden="true">★</span><span class="visually-hidden">2 stars</span></label>
+                <label class="review-rating-option"><input type="radio" name="reviewRating" value="1"><span aria-hidden="true">★</span><span class="visually-hidden">1 star</span></label>
+              </div>
+            </fieldset>
+            <div class="review-form-field">
+              <label for="reviewText">Your review</label>
+              <textarea id="reviewText" name="reviewText" rows="4" minlength="10" maxlength="1000" required></textarea>
+            </div>
+            <button class="button button-dark" type="submit">Continue to WhatsApp <span aria-hidden="true">↗</span></button>
+            <p class="review-submission-note" id="reviewSubmissionStatus" role="status">WhatsApp opens with your review draft; press Send there. Reviews are added to the site only after approval.</p>
+            <a class="review-whatsapp-link" id="reviewWhatsAppLink" href="#" target="_blank" rel="noreferrer" hidden>Open WhatsApp review draft <span aria-hidden="true">↗</span></a>
+          </form>
+        </div>
+      </section>
+
+      <section class="story-section" id="our-story">
+        <div class="story-decoration" aria-hidden="true">S</div>
+        <div class="story-content">
+          <span class="eyebrow">OUR STORY · WHO WE ARE</span>
+          <h2>Rooted in Nature,<br><em>Crafted with Love.</em></h2>
+          <p>At Sahaj Organics, we believe that true wellness begins with nature. Our journey started with a simple yet powerful idea: to bring the purity of traditional herbal care into a modern world. Located in Chittoor, Andhra Pradesh, we’re dedicated to crafting natural, handmade products with care for you and the planet.</p>
+          <p>From cold-pressed soaps to herbal hair oils and eco-friendly home cleaners, every product is made in small batches. We source our ingredients thoughtfully, focusing on sustainable practices that honour the earth.</p>
+          <a class="text-link" href="contact.html">Get to know us <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="story-image"><img src="images/SheaButter.jpeg" alt="Shea butter, one of Sahaj Organics’ natural ingredients" loading="lazy"><span>Rooted in nature.<br><em>Made with love.</em></span></div>
+      </section>
+
+      <section class="story-values-section" aria-labelledby="story-values-heading">
+        <div class="story-values-heading">
+          <span class="eyebrow">WHAT WE BELIEVE</span>
+          <h2 id="story-values-heading">Care in every choice.</h2>
+        </div>
+        <div class="story-values-grid">
+          <article class="story-value-card">
+            <span class="story-value-icon" aria-hidden="true">✿</span>
+            <h3>100% Natural</h3>
+            <p>No harsh chemicals, parabens, or sulphates. Just pure botanical goodness.</p>
+          </article>
+          <article class="story-value-card">
+            <span class="story-value-icon" aria-hidden="true">✋</span>
+            <h3>Handcrafted</h3>
+            <p>Made with care in small batches to preserve potency and quality.</p>
+          </article>
+          <article class="story-value-card">
+            <span class="story-value-icon" aria-hidden="true">⌂</span>
+            <h3>Sustainable</h3>
+            <p>Eco-friendly packaging and ethically sourced ingredients for a greener future.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="promise-section" aria-labelledby="promise-heading">
+        <div class="promise-content">
+          <span class="eyebrow">OUR PROMISE</span>
+          <h2 id="promise-heading">Committed to <em>Purity.</em></h2>
+          <blockquote>“We started Sahaj Organics with a vision to provide families with products they can trust blindly. Transparency is our core value—what you see on the label is exactly what you get. We invite you to join our family and experience the difference of genuine herbal care.”</blockquote>
+          <div class="promise-author"><strong>Mrs. D. C. Varalakshmi</strong><span>Proprietor</span></div>
+        </div>
+        <span class="promise-flower" aria-hidden="true">✿</span>
+      </section>
+
+      <section class="closing-banner">
+        <span class="eyebrow">YOUR NEXT CREATION STARTS HERE</span>
+        <h2>Have an ingredient in mind?</h2>
+        <p>Ask us about the collection, pricing, or what might be right for your project.</p>
+        <a class="button button-light" href="contact.html">Get in touch <span aria-hidden="true">→</span></a>
+        <span class="banner-leaf" aria-hidden="true">✿</span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <a class="brand footer-brand" href="index.html" aria-label="Sahaj Organics home">
+          <span class="brand-mark" aria-hidden="true">s</span>
+          <span class="brand-copy"><strong>Sahaj Organics</strong><small>by Kavitha</small></span>
+        </a>
+        <p>Botanical ingredients<br>for thoughtful making.</p>
+        <div class="footer-links"><strong>EXPLORE</strong><a href="#shop">Soapmaking supplies</a><a href="#reviews">Customer reviews</a><a href="#our-story">Our story</a><a href="contact.html">Contact us</a></div>
+        <div class="footer-contact"><strong>LET’S CONNECT</strong><a href="tel:+916305970687">+91 63059 70687</a><span>Mon–Sat, 9 am–6 pm</span><a href="mailto:himalherbalbrp@gmail.com">himalherbalbrp@gmail.com</a><a href="https://wa.me/916305970687" target="_blank" rel="noreferrer">Message us on WhatsApp ↗</a></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="currentYear"></span> Sahaj Organics by Kavitha</span><span>MADE WITH CARE <span aria-hidden="true">♡</span></span></div>
+    </footer>
+    <dialog class="product-dialog" id="productDialog" aria-labelledby="dialogProductName" aria-describedby="dialogProductDescription">
+      <div class="product-dialog-panel">
+        <button class="dialog-close" type="button" aria-label="Close product details" autofocus>×</button>
+        <div class="product-dialog-layout">
+          <div class="product-dialog-media"><img id="dialogProductImage" src="" alt=""></div>
+          <div class="product-dialog-copy">
+            <span class="product-category" id="dialogProductCategory"></span>
+            <h2 id="dialogProductName"></h2>
+            <p class="dialog-product-price" id="dialogProductPrice"></p>
+            <section class="dialog-description">
+              <h3>About this ingredient</h3>
+              <p id="dialogProductDescription"></p>
+            </section>
+            <div class="product-detail-sections" id="dialogProductDetails" hidden>
+              <section>
+                <h3>Common uses</h3>
+                <ul class="product-detail-list" id="dialogProductUses"></ul>
+              </section>
+              <section>
+                <h3>Why makers choose it</h3>
+                <ul class="product-detail-list" id="dialogProductHighlights"></ul>
+              </section>
+            </div>
+            <p class="dialog-product-note" id="dialogProductNote"></p>
+            <a class="button button-dark dialog-enquire" id="dialogProductEnquire" href="https://wa.me/916305970687" target="_blank" rel="noreferrer">Ask about this product <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
