@@ -267,6 +267,18 @@ if (productsGrid && productDialog) {
   const dialogHighlights = productDialog.querySelector("#dialogProductHighlights");
   const dialogNote = productDialog.querySelector("#dialogProductNote");
   const dialogEnquire = productDialog.querySelector("#dialogProductEnquire");
+  const dialogCopy = productDialog.querySelector(".product-dialog-copy");
+  const updateDialogCopyHeight = () => {
+    if (window.matchMedia("(max-width: 720px)").matches) {
+      dialogCopy.style.maxHeight = "";
+      return;
+    }
+    const imageHeight = dialogImage.getBoundingClientRect().height;
+    if (imageHeight > 0) dialogCopy.style.maxHeight = `${imageHeight}px`;
+  };
+  new ResizeObserver(updateDialogCopyHeight).observe(dialogImage);
+  dialogImage.addEventListener("load", updateDialogCopyHeight);
+  window.addEventListener("resize", () => requestAnimationFrame(updateDialogCopyHeight));
 
   productsGrid.addEventListener("click", (event) => {
     const trigger = event.target.closest("[data-product-details]");
@@ -278,6 +290,7 @@ if (productsGrid && productDialog) {
 
     dialogImage.src = `images/${product.image}`;
     dialogImage.alt = product.name;
+    dialogCopy.style.maxHeight = "";
     dialogCategory.textContent = product.category;
     dialogName.textContent = product.name;
     dialogPrice.textContent = product.price || "Ask for current price";
@@ -296,6 +309,7 @@ if (productsGrid && productDialog) {
     dialogNote.textContent = "These are general formulation ideas. Confirm product grade, suitability, and safe usage rates for your finished product.";
     dialogEnquire.href = `https://wa.me/916305970687?text=${encodeURIComponent(`Hello Sahaj Organics, I’d like to know more about ${product.name}.`)}`;
     productDialog.showModal();
+    updateDialogCopyHeight();
   });
 
   document.addEventListener("keydown", (event) => {
