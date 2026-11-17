@@ -6,7 +6,7 @@ const products = [
   { name: "Beeswax", image: "Beeswax.jpeg", category: "Soapmaking butters & waxes", description: "A versatile wax for soapmaking and a variety of handmade formulations.", price: "₹120 / 100 g" },
   { name: "Besan Flour", image: "BesanFlour.jpeg", category: "Soapmaking pantry powders", description: "A finely milled flour made from chickpeas, often called besan or gram flour.", price: "₹15 / 100 g", search: "gram chickpea flour" },
   { name: "Bhringaraj Powder", image: "BhringarajPowder.jpeg", category: "Botanical powders", description: "A finely milled bhringaraj botanical powder for your DIY ingredient collection.", price: "₹1,000 / kg" },
-  { name: "Bru Coffee Powder", image: "BruCoffeePowder.jpeg", category: "Soapmaking pantry powders", description: "Coffee powder for adding a familiar ingredient to your handmade projects.", search: "coffee" },
+  { name: "Bru Coffee Powder", image: "BruCoffeePowder.jpeg", category: "Soapmaking pantry powders", description: "Coffee powder for adding a familiar ingredient to your handmade projects.", price: "₹5 / packet", search: "coffee" },
   { name: "Chamomile Powder", image: "ChamomilePowder.jpeg", category: "Botanical powders", description: "Finely milled chamomile for your botanical and DIY formulations.", price: "₹255 / 100 g" },
   { name: "Charcoal Powder", image: "CharcoalPowder.jpeg", category: "Soap clays & exfoliants", description: "A dark powdered ingredient for creative soapmaking and handmade formulations.", price: "₹120 / 100 g" },
   { name: "Corn Flour", image: "CornFlour.jpeg", category: "Soapmaking pantry powders", description: "A fine corn-based powder for your ingredient shelf and DIY projects.", price: "₹153 / 500 g", search: "corn starch" },
